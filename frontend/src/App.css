@@ -1,0 +1,38 @@
+.app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+}
+
+.app-main {
+  flex: 1;
+  padding-bottom: 2.5rem;
+}
+
+.offline-banner {
+  background: var(--accent-pale);
+  color: var(--accent-dark);
+  padding: .65rem 1rem;
+  font-size: .82rem;
+  text-align: center;
+  line-height: 1.5;
+  border-bottom: 2px solid var(--accent);
+}
+.offline-banner code {
+  background: rgba(0,0,0,.07);
+  padding: .1rem .35rem;
+  border-radius: var(--radius-xs);
+  font-size: .78rem;
+  font-family: monospace;
+}
+
+.app-footer {
+  background: var(--primary-dark);
+  color: rgba(255,255,255,.55);
+  text-align: center;
+  padding: .85rem 1rem;
+  font-size: .72rem;
+  line-height: 1.5;
+}
+.footer-note { opacity: .7; }

@@ -1,0 +1,157 @@
+.advisor-card {
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  margin-top: .5rem;
+}
+
+/* ── SELL NOW — terracotta/warm (urgency) ── */
+.advisor-card--sell {
+  background: linear-gradient(135deg, #fdf3ee 0%, #f5ddd1 100%);
+  border: 2px solid var(--accent);
+  border-left: 5px solid var(--accent);
+}
+
+/* ── HOLD — deep green (patience) ── */
+.advisor-card--hold {
+  background: linear-gradient(135deg, #edf6ef 0%, #d4ead9 100%);
+  border: 2px solid var(--primary-light);
+  border-left: 5px solid var(--primary);
+}
+
+.advisor-card--loading {
+  background: var(--white);
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  color: var(--gray-500);
+  font-size: .9rem;
+  padding: 1.25rem;
+}
+
+.advisor-spinner {
+  width: 24px; height: 24px;
+  border: 3px solid var(--primary-pale);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.advisor-badge {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: .85rem;
+}
+
+.advisor-badge-icon { font-size: 2.2rem; }
+
+.advisor-rec {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  line-height: 1.1;
+}
+
+.advisor-card--sell .advisor-rec { color: var(--accent-dark); }
+.advisor-card--hold .advisor-rec { color: var(--primary-dark); }
+
+.advisor-rec-sub {
+  font-size: .7rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-top: .15rem;
+  font-family: var(--font-body);
+}
+
+.advisor-justification {
+  font-size: .93rem;
+  color: var(--gray-700);
+  line-height: 1.65;
+  margin-bottom: .85rem;
+  white-space: pre-wrap;
+}
+
+/* ── Reasoning trace ── */
+.reasoning-trace {
+  border-top: 1px solid rgba(0,0,0,.1);
+  padding-top: .85rem;
+}
+
+.trace-toggle {
+  background: none;
+  color: var(--primary);
+  font-size: .85rem;
+  font-weight: 600;
+  padding: .35rem 0;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  transition: color .15s;
+  font-family: var(--font-body);
+}
+.trace-toggle:hover { color: var(--primary-dark); }
+
+.trace-body {
+  margin-top: .65rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.trace-step {
+  background: rgba(255,255,255,.75);
+  border-radius: var(--radius-sm);
+  padding: .7rem .85rem;
+  border: 1px solid rgba(0,0,0,.07);
+  box-shadow: var(--shadow-sm);
+}
+
+.trace-step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  margin-bottom: .4rem;
+}
+
+.trace-tool-icon { font-size: 1.2rem; margin-top: .1rem; }
+
+.trace-tool-name {
+  font-weight: 700;
+  font-size: .87rem;
+  color: var(--charcoal);
+}
+.trace-tool-fn code {
+  font-size: .72rem;
+  color: var(--gray-500);
+  font-family: monospace;
+}
+
+.trace-result {
+  font-size: .83rem;
+  color: var(--gray-700);
+  line-height: 1.55;
+  padding-left: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.trace-result--error { color: var(--error); }
+.trace-result--json {
+  background: var(--gray-100);
+  border-radius: var(--radius-xs);
+  padding: .5rem;
+  font-size: .72rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+.trace-note {
+  font-size: .72rem;
+  color: var(--accent);
+  font-style: italic;
+}

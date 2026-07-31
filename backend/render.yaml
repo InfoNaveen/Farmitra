@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: farmitra-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python generate_price_data.py
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # Set manually in Render dashboard
+      - key: HF_API_TOKEN
+        sync: false          # Set manually in Render dashboard
+      - key: ALLOWED_ORIGINS
+        value: http://localhost:5173  # UPDATE after Vercel deploy: add ,https://farmitra.vercel.app
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "10"
+      - key: HF_MODEL
+        value: linkanjarad/mobilenet_v2_1.0_224-plant-disease-identification
+    healthCheckPath: /health
+    # Note: torch/transformers removed — uses HuggingFace Inference API instead
+    # This dramatically reduces cold-start time (no ~2GB model download)

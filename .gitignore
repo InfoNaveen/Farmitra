@@ -1,0 +1,46 @@
+# ===== Farmitra .gitignore =====
+
+# --- Secrets (CRITICAL — never commit) ---
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# --- Python ---
+backend/venv/
+C:/AgriSense_venv/
+backend/__pycache__/
+backend/**/__pycache__/
+**/*.pyc
+**/*.pyo
+*.egg-info/
+.eggs/
+backend/.transformers_cache/
+backend/hf_cache/
+
+# HuggingFace model cache (if created inside repo)
+**/.cache/
+**/huggingface/
+
+# --- Node / Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE ---
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# --- Local-only helper scripts (keep for judges, comment out to exclude) ---
+# START_BACKEND.bat
+# START_FRONTEND.bat

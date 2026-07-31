@@ -1,0 +1,104 @@
+.diagnose-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--primary-dark);
+  margin-bottom: .4rem;
+}
+
+.section { display: flex; flex-direction: column; }
+
+.status-banner {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .7rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  font-weight: 500;
+}
+.status-banner--loading {
+  background: var(--info-bg);
+  color: var(--info);
+  border-left: 3px solid var(--info);
+}
+.status-banner--error {
+  background: var(--error-bg);
+  color: var(--error);
+  border-left: 3px solid var(--error);
+}
+
+.spinner {
+  width: 18px; height: 18px;
+  border: 2.5px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Chat */
+.chat-section { display: flex; flex-direction: column; gap: .5rem; }
+
+.chat-messages {
+  background: var(--cream-dark);
+  border-radius: var(--radius);
+  padding: .85rem;
+  min-height: 120px;
+  max-height: 380px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--cream-dark);
+}
+
+.chat-input-row {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: .4rem;
+}
+
+.chat-input {
+  width: 100%;
+  resize: none;
+  font-size: .92rem;
+  line-height: 1.5;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+}
+
+.chat-actions {
+  display: flex;
+  gap: .5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.send-btn {
+  padding: .6rem 1.4rem;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+  transition: background .15s, transform .1s, box-shadow .15s;
+  box-shadow: 0 2px 6px rgba(193,98,42,.3);
+}
+.send-btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+  box-shadow: 0 3px 10px rgba(193,98,42,.4);
+}
+.send-btn:active:not(:disabled) { transform: scale(.97); }
+.send-btn:disabled { opacity: .45; cursor: not-allowed; box-shadow: none; }

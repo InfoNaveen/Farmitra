@@ -1,0 +1,93 @@
+.price-chart-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 1.25rem;
+  margin-top: .5rem;
+  border: 1px solid var(--primary-pale);
+}
+
+.price-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: .5rem;
+}
+
+.price-chart-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--charcoal);
+}
+.price-chart-subtitle {
+  font-size: .73rem;
+  color: var(--gray-500);
+  margin-top: .15rem;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.price-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .3rem;
+}
+
+.current-price {
+  display: flex;
+  align-items: baseline;
+  gap: .2rem;
+}
+.current-price-label {
+  font-size: .68rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.current-price-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--primary);
+}
+.current-price-unit {
+  font-size: .68rem;
+  color: var(--gray-500);
+}
+
+.trend-badge {
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.chart-wrap { width: 100%; }
+
+.chart-tooltip {
+  background: var(--white);
+  border: 1px solid var(--primary-pale);
+  border-radius: var(--radius-sm);
+  padding: .55rem .8rem;
+  font-size: .82rem;
+  box-shadow: var(--shadow-md);
+}
+.chart-tooltip-date {
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: .2rem;
+  font-family: var(--font-heading);
+}
+.chart-tooltip-note { color: var(--gray-500); font-size: .68rem; margin-top: .2rem; }
+
+.chart-disclaimer {
+  margin-top: .85rem;
+  font-size: .71rem;
+  color: var(--accent-dark);
+  background: var(--accent-tint);
+  padding: .4rem .7rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  line-height: 1.45;
+}
